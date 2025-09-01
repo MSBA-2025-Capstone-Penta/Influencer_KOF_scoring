@@ -1,0 +1,56 @@
+# --- Python cache/bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+
+# --- Environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+pip-wheel-metadata/
+
+# --- Jupyter/analysis leftovers
+.ipynb_checkpoints/
+.profile
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# --- OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Local config & secrets
+*.env
+*.env.*
+.envrc
+
+# --- Build/artifacts
+build/
+dist/
+site/
+htmlcov/
+coverage/
+*.log
+
+# --- App-specific: large/local data & outputs
+# keep raw/bulk data out of Git; adjust to your folders
+data/
+datasets/
+outputs/
+results/
+**/*.csv
+**/*.xlsx
+# (optional) allow a tiny sample data file to stay in Git:
+# !data/sample_small.csv
+
+# --- Node (if you add a frontend later)
+node_modules/
