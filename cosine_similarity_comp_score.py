@@ -84,7 +84,7 @@ def build_keyword_regex(keywords) -> str | None:
     """
     Returns an OR-joined regex where each keyword is wrapped in custom
     'token boundaries' so 'ACA' won't match 'tobaccas' or 'ACADEMY'.
-    We block letters/digits/underscore on both sides.
+    Block letters/digits/underscore on both sides.
     """
     pats = []
     for k in keywords:
@@ -130,7 +130,7 @@ def tfidf_cosine_matches(tweet_subset: pd.DataFrame,
         [article_subset["clean_body"], tweet_subset["clean_text"]], ignore_index=True)
     vectorizer = TfidfVectorizer(stop_words="english")
 
-    # Pylance-safe: cast to csr_matrix so slicing [:, :] is recognized
+    # FIX: Pylance-safe: cast to csr_matrix so slicing [:, :] is recognized
     _X = vectorizer.fit_transform(combined_corpus)
     tfidf_matrix = cast(csr_matrix, _X)
 
